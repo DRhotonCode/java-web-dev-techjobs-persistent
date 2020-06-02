@@ -16,4 +16,6 @@ DROP TABLE job;
 
 SELECT name, description
 FROM skill
-ORDER BY name;
+INNER JOIN job_skills ON skill_id = job_skills.skill_id
+WHERE job_skills.job_id IS NOT NULL
+ORDER BY name ASC;

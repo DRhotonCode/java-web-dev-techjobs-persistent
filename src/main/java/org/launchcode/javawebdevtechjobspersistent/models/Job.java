@@ -10,20 +10,16 @@ public class Job extends AbstractEntity{
     @ManyToOne
     private Employer employer;
 
-
     @ManyToMany
     private List<Skill> skills = new ArrayList<>();
-
-    public Job() {
-    }
 
     public Job(Employer employer, List<Skill> skills) {
         this.employer = employer;
         this.skills = skills;
     }
 
-// Getters and setters.
-
+    public Job() {
+    }
 
     public Employer getEmployer() {
         return employer;
